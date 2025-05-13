@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Dm-sans;
+      font-weight: 500;
+      font-size: 18px;
+      background-color: hsl(0, 0%, 100%);
+      max-width: 300px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 300px,200px,300px 200px;
+      gap: 1rem;
+      
+    }
+    .card {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+    .createpost {
+      grid-column: span 1;
+      height: 300px;
+      background-color:  hsl(31, 66%, 98%);
+      align-content: center;
+      width: 150px;
+    
+    }
+    #quicker{
+      color: hsl(256, 67%, 59%);
+    }
+    .socialmedia {
+      background: hsl(256, 67%, 59%);
+      color: aliceblue;
+      grid-column: span 2;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .social{
+      font-weight:500 ;
+      font-size: xx-large;
+      text-align: center;
+      
+    }
+    .Schedule {
+      background: hsl(254, 88%, 90%);
+      grid-row: span 2;
+      width: 200px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .writeyourcontent{
+      padding-left: 1rem;
+      background: rgb(238, 181, 57);
+      grid-row: span 3;
+      font-weight: 700; 
+      font-size: larger; 
+      height: 450px;
+      width: 150px;
+    }
+    .write{
+      margin-top: 1rem;
+    }
+    .stars{
+      margin-left: 7rem;
+    }
+    .manage{
+      padding-left: 1rem;
+      background:white;
+      padding: 3rem;
+      grid-row: span 1;
+      align-content: center;
+      font-family: DM sans;
+      font-weight: 500;
+      font-size: larger;
+      width: 250px; 
+    }
+      .maintain {
+      background:rgb(238, 181, 57) ;
+      padding: 3rem;
+      grid-row: span 1;
+      font-family: DM sans;
+      font-weight: 500;
+      font-size: larger;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .fasteraudience{
+      background: white;
+      padding: 3rem;
+      grid-column: span 1;
+      grid-row: span 1;
+      align-content: center;
+      width: 250px;
+      font-family: DM sans;
+      font-weight: 500;
+      font-size:small;
+    }
+    .fasternumb{
+      font-size: xx-large;
+    }
+    .Grow{
+      background: hsl(256, 67%, 59%);
+      padding: 3rem;
+      color: #f4f4f5;
+      grid-column: span 2;
+      grid-row: span 1;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      font-size: larger;
+      height: 200px;
+    
+    }
+    .createpostimg{
+      margin-top: 1rem;
+      border-radius: 1rem;  
+    }
+    .socialmediaimage{
+      margin-top: 1rem;
+      position: relative;
+      left: 8rem;
+      
+    }
+    .x{
+      color:rgb(240, 160, 94) ;
+
+    }
+    .Scheduleimg{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 25px;
+      border-radius: 20px;
+    }
+    .writeimg{
+      margin-top: 3rem;
+      margin-right: 1rem;
+      border-radius: 10px;
+    }
+    .manageimg{
+      margin-top: -2rem;
+    }
+    .maintainimg{
+      margin-bottom: -3rem;
+      border-radius: 4px;
+      
+    }
+    .fasterimg{
+     margin-top: 1rem;
+    }
+    .Growimg{
+      border-radius: 10px;
+      margin-top: -20px;
+    }
+    
+ @media (max-width: 1440px){
+.grid-container{
+  grid-template-columns: repeat(4,fr);
+}
+ }
+ 
+ @media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  .writeyourcontent {
+    height: auto;
+  }
+
+  .Grow,
+  .socialmedia {
+    align-items: right;
+    text-align: left;
+  }
+
+  .Growimg {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto,auto;
+    gap: 2rem;
+  }
+}
