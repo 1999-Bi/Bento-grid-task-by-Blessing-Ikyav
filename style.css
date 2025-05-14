@@ -14,8 +14,8 @@
       font-family: Dm-sans;
       font-weight: 500;
       font-size: 18px;
+      line-height:1.1;
       background-color: hsl(0, 0%, 100%);
-      max-width: 300px;
     }
     .grid-container {
       display: grid;
@@ -24,21 +24,28 @@
     "card1 card2 card2 card4"
     "card3 card2 card2 card4"
     "card5 card6 card7 card8";
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: auto;
+  gap: 1rem;
+  max-width: 1440px;
+  margin-inline: auto;
       
     }
     .card {
       background: var(--white);
-      border-radius: 1rem;
-      padding: 1.5rem;
+      border-radius: .5rem;
+      padding: 1.rem;
     }
 
     .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
     }
+.inside-element{
+    grid-template-columns:1fr 1fr;
+}
+.inside-element:nth-child{
+    grid-template-columns:.95fr, 2fr;
+}
+
 .card-1 { grid-area: card1; }
 .card-2 { grid-area: card2; background-color: hsl(256, 67%, 59%) }
 .card-3 { grid-area: card3; background-color: hsl(254, 88%, 90%); }
@@ -49,24 +56,18 @@
 .card-8 { grid-area: card8; background-color: hsl(256, 67%, 59%); color: white; }
 
     .createpost {
-      grid-column: span 1;
-      height: 300px;
+      place-content:center;
+      padding:2rem;
       background-color:  hsl(31, 66%, 98%);
-      align-content: center;
-      width: 150px;
-    
-    }
+     }
     #quicker{
       color: hsl(256, 67%, 59%);
     }
     .socialmedia {
       background: hsl(256, 67%, 59%);
       color: aliceblue;
-      grid-column: span 2;
-      height: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
+      place-content:center;
+      text-align:center;
     }
     .social{
       font-weight:500 ;
@@ -76,19 +77,16 @@
     }
     .Schedule {
       background: hsl(254, 88%, 90%);
-      grid-row: span 2;
-      width: 200px;
-      display: flex;
-      flex-wrap: wrap;
+      place-content:center;
+      padding-left:1.5rem;
+      overflow:hidden;
     }
     .writeyourcontent{
-      padding-left: 1rem;
       background: rgb(238, 181, 57);
-      grid-row: span 3;
+       position:relative;
+       overflow:hidden;
       font-weight: 700; 
-      font-size: larger; 
-      height: 450px;
-      width: 150px;
+      font-size: larger;    
     }
     .write{
       margin-top: 1rem;
@@ -97,15 +95,12 @@
       margin-left: 7rem;
     }
     .manage{
-      padding-left: 1rem;
+     position:relative;
+     overflow-x:hidden;
       background:white;
-      padding: 3rem;
-      grid-row: span 1;
-      align-content: center;
       font-family: DM sans;
       font-weight: 500;
       font-size: larger;
-      width: 250px; 
     }
       .maintain {
       background:rgb(238, 181, 57) ;
@@ -121,11 +116,7 @@
     }
     .fasteraudience{
       background: white;
-      padding: 3rem;
-      grid-column: span 1;
-      grid-row: span 1;
-      align-content: center;
-      width: 250px;
+      place-items:center;
       font-family: DM sans;
       font-weight: 500;
       font-size:small;
@@ -151,9 +142,8 @@
       border-radius: 1rem;  
     }
     .socialmediaimage{
-      margin-top: 1rem;
-      position: relative;
-      left: 8rem;
+        max-width:10rem;
+        margin-inline:auto;
       
     }
     .x{
@@ -161,18 +151,22 @@
 
     }
     .Scheduleimg{
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      margin-left: 25px;
-      border-radius: 20px;
+      max-width:100vh;
+     position:relative;
+     right:-1.5;
     }
     .writeimg{
-      margin-top: 3rem;
-      margin-right: 1rem;
-      border-radius: 10px;
+      position:absolute;
+      bottom:-4rem;
+      left:1.4remm;  
     }
     .manageimg{
-      margin-top: -2rem;
+      margin-bottom: 1rem;
+        position:relative;
+        right:2rem;
+        max-width:100%;
+        margin-bottom:1rem;
+        
     }
     .maintainimg{
       margin-bottom: -3rem;
