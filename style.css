@@ -104,15 +104,12 @@
     }
       .maintain {
       background:rgb(238, 181, 57) ;
-      padding: 3rem;
-      grid-row: span 1;
+     position:relative;
+     overflow-x:hidden;
+      background:white;
       font-family: DM sans;
       font-weight: 500;
-      font-size: larger;
-      width: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      font-size: larger
     }
     .fasteraudience{
       background: white;
