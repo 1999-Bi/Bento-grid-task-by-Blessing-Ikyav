@@ -183,22 +183,7 @@
     }
     
 
- @media screen and (max-width: 950px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 13rem 13rem 13rem 13rem;
-        grid-template-areas: 
-            'card2 card3'
-            'card2 column3'
-            'card4 card4'
-            'card1 card1'
-        ;
-    }
 
-    .card-1 {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
 @media (max-width: 768px) {
   .grid-container {
