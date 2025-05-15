@@ -1,204 +1,259 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-*::before, *::after{
-    box-sizing: border-box;
+
+/* root */
+:root {
+    --clr-Purple-100: #dacffc;
+    --clr-Purple-500: #7650dc;
+    
+    --clr-Yellow-100: #f9eee1;
+    --clr-Yellow-500: #ffcb6b;
+    
+    --clr-White: #ffffff;
+    --clr-Black: #121212;
+
+
+    --ff-main: "DM Sans", serif;
+    --fs-body: 1.125rem;
+    --fs-heading: 1.75rem;
+
+    --fw-400: 400;
+    --fw-500: 500;
+}
+
+
+/* reset */
+*, *::before, *::after {
     margin: 0;
-    padding:0;
-}
-.img{
-    max-width:80%;
-    display:block;
-}
-    body {
-      margin: 0;
-      padding: 2rem;
-      font-family: Dm-sans;
-      font-weight: 500;
-      font-size: 18px;
-      line-height:1.1;
-      background-color: hsl(0, 0%, 100%);
-    }
-    .grid-container {
-      display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas:
-    "card1 card2 card2 card4"
-    "card3 card2 card2 card4"
-    "card5 card6 card7 card8";
-  gap: 1rem;
-  max-width: 1440px;
-  margin-inline: auto;
-      
-    }
-    .card {
-      background: var(--white);
-      border-radius: .5rem;
-      padding: 1.rem;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-    }
-.inside-element{
-    grid-template-columns:1fr 1fr;
-}
-.inside-element:nth-child{
-    grid-template-columns:.95fr, 2fr;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.card-1 { grid-area: card1; }
-.card-2 { grid-area: card2; background-color: hsl(256, 67%, 59%) }
-.card-3 { grid-area: card3; background-color: hsl(254, 88%, 90%); }
-.card-4 { grid-area: card4; background-color: #ffcb74; }
-.card-5 { grid-area: card5; }
-.card-6 { grid-area: card6; background-color: #ffcb74; }
-.card-7 { grid-area: card7; }
-.card-8 { grid-area: card8; background-color: hsl(256, 67%, 59%); color: white; }
-
-    .createpost {
-      place-content:center;
-      padding:2rem;
-      background-color:  hsl(31, 66%, 98%);
-     }
-    #quicker{
-      color: hsl(256, 67%, 59%);
-    }
-    .socialmedia {
-      background: hsl(256, 67%, 59%);
-      color: aliceblue;
-      place-content:center;
-      text-align:center;
-    }
-    .social{
-      font-weight:500 ;
-      font-size: xx-large;
-      text-align: center;
-      
-    }
-    .Schedule {
-      background: hsl(254, 88%, 90%);
-      place-content:center;
-      padding-left:1.5rem;
-      overflow:hidden;
-    }
-    .writeyourcontent{
-      background: rgb(238, 181, 57);
-       position:relative;
-       overflow:hidden;
-      font-weight: 700; 
-      font-size: larger;    
-    }
-    .write{
-      margin-top: 1rem;
-    }
-    .stars{
-      margin-left: 7rem;
-    }
-    .manage{
-     position:relative;
-     overflow-x:hidden;
-      background:white;
-      font-family: DM sans;
-      font-weight: 500;
-      font-size: larger;
-    }
-      .maintain {
-      background:rgb(238, 181, 57) ;
-     position:relative;
-     overflow-x:hidden;
-      background:white;
-      font-family: DM sans;
-      font-weight: 500;
-      font-size: larger
-    }
-    .fasteraudience{
-      background: white;
-      place-items:center;
-      font-family: DM sans;
-      font-weight: 500;
-      font-size:small;
-    }
-    .fasternumb{
-      font-size: xx-large;
-    }
-    .Grow{
-      background: hsl(256, 67%, 59%);
-      padding: 3rem;
-      color: #f4f4f5;
-      grid-column: span 2;
-      grid-row: span 1;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      font-size: larger;
-      height: 200px;
-    
-    }
-    .createpostimg{
-      margin-top: 1rem;
-      border-radius: 1rem;  
-    }
-    .socialmediaimage{
-        max-width:10rem;
-        margin-inline:auto;
-      
-    }
-    .x{
-      color:rgb(240, 160, 94) ;
-
-    }
-    .Scheduleimg{
-      max-width:100vh;
-     position:relative;
-     right:-1.5;
-    }
-    .writeimg{
-      position:absolute;
-      bottom:-4rem;
-      left:1.4remm;  
-    }
-    .manageimg{
-      margin-bottom: 1rem;
-        position:relative;
-        right:2rem;
-        max-width:100%;
-        margin-bottom:1rem;
-        
-    }
-    .maintainimg{
-      margin-bottom: -3rem;
-      border-radius: 4px;
-      
-    }
-    .fasterimg{
-     margin-top: 1rem;
-    }
-    .Growimg{
-      border-radius: 10px;
-      margin-top: -20px;
-    }
-    
-
-
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-areas:
-      "card1"
-      "card2"
-      "card3"
-      "card4"
-      "card5"
-      "card6"
-      "card7"
-      "card8";
-    grid-template-columns: 1fr;
-  }
+img {
+    max-width: 80%;
+    display: block;
 }
-@media (max-width: 375px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto,auto;
-    gap: 2rem;
-  }
+
+body {
+    font-family: var(--ff-main);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-400);
+    line-height: 1.1;
+    color: var(--clr-Black);
+    background: #f9f9f9;
+    padding: 2rem 1rem;
+}
+
+
+/* helper classes */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+
+/* text styles */
+h1 {
+    font-size: 2.75rem;
+    font-weight: var(--fw-500);
+}
+
+h2 {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-500);
+    line-height: .9;
+}
+
+small {
+    font-size: var(--fs-body);
+}
+
+
+
+/* layout styles */
+.bento-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 13rem 13rem 13rem;
+    grid-template-areas: 
+        'column1 column2 column3'
+        'column1 column2 column3'
+        'column1 column4 column4'
+    ;
+    gap: 1rem;
+    max-width: 60rem;
+    margin-inline: auto;
+}
+
+.bento-grid-container > *, .inside-element {
+    display: grid;
+    gap: 1rem;
+}
+
+.bento-grid-item--element {
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.inside-element {
+    grid-template-columns: 1fr 1fr;
+}
+
+.inside-element:nth-child(1) {
+    grid-template-columns: .95fr 2fr;
+}
+
+.column1 {
+    grid-area: column1;
+}
+
+.column2 {
+    grid-area: column2;
+}
+
+.column3 {
+    grid-area: column3;
+}
+
+.column4 {
+    grid-area: column4;
+}
+
+
+/* ui components */
+.create {
+    place-content: center;
+    padding: 2rem;
+    background-color: var(--clr-Yellow-100);
+}
+
+.content {
+    place-content: center;
+    padding: 1.5rem;
+    background-color: var(--clr-Yellow-500);
+}
+
+.media {
+    place-content: center;
+    color: var(--clr-White);
+    text-align: center;
+    background-color: var(--clr-Purple-500);
+}
+
+.media img {
+    max-width: 10rem;
+    margin-inline: auto;
+}
+
+.manage {
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--clr-White);
+}
+
+.manage img {
+    position: relative;
+    right: -2rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.posting {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--clr-Yellow-500);
+}
+
+.posting img {
+    position: absolute;
+    bottom: -4rem;
+    left: 1.4rem;
+}
+
+.schedule {
+    place-content: center;
+    padding-left: 1.5rem;
+    overflow: hidden;
+    background-color: var(--clr-Purple-100);
+}
+
+.schedule img {
+    position: relative;
+    right: -1.5rem;
+    max-width: 100%;
+}
+
+.audience {
+    place-content: center;
+    background-color: var(--clr-White);
+}
+
+.followers {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    color: var(--clr-White);
+    padding: 0;
+    background-color: var(--clr-Purple-500);
+}
+
+
+
+@media screen and (max-width: 950px) {
+    .bento-grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 13rem 13rem 13rem 13rem;
+        grid-template-areas: 
+            'column2 column3'
+            'column2 column3'
+            'column4 column4'
+            'column1 column1'
+        ;
+    }
+
+    .column1 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .bento-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+        grid-template-areas: 
+            'column2 '
+            'column3 '
+            'column4 '
+            'column1 '
+        ;
+    }
+
+    .bento-grid-container > *, .inside-element {
+        gap: 2rem;
+    }
+
+    .column1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inside-element, .inside-element:nth-child(1), .column-one {
+        grid-template-columns: 1fr;
+    }
+
+    .manage img {
+        position: relative;
+        max-width: 80%;
+        margin-bottom: 1rem;
+    }
+   
+    .posting img {
+        position: relative;
+        bottom: -1rem;
+        left: 0;
+    }
+
+    .followers {
+        text-align: center;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
 }
